@@ -1,6 +1,25 @@
 // @ts-check
 import { test, expect } from "@playwright/test";
 
+
+//opening https://example.com
+test("Checking if we can open example.com", async ({ page }) => {
+  await page.goto("https://example.com")
+  //waiting for example.com to be loaded then checking its content
+  await expect(page.getByRole('heading')).toBeVisible()
+  await expect(page).toHaveTitle('Example Domain')
+  await expect(page).toHaveURL('https://example.com/')
+})
+
+
+
+
+
+
+
+
+//Default tests
+/*
 test("has title", async ({ page }) => {
   await page.goto("https://playwright.dev/");
 
@@ -19,3 +38,4 @@ test("get started link", async ({ page }) => {
     page.getByRole("heading", { name: "Installation" }),
   ).toBeVisible();
 });
+*/

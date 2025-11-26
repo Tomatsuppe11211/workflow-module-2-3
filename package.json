@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This repo is meant for the lesson task belonging to module 2.3 in the workflow subject.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "live-server --port=5500"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tomatsuppe11211/workflow-module-2-3.git"
@@ -19,5 +21,14 @@
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.1",
     "prettier": "^3.6.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright": "^1.57.0",
+    "playwright-core": "^1.57.0",
+    "undici-types": "^7.16.0",
+    "vite": "^7.2.4"
   }
 }
