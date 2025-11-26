@@ -17,6 +17,11 @@ test("Checking if we can open example.com", async ({ page }) => {
 
 
 
+test('Checking if i can find the button on the Noroff website', async ({page}) => {
+  await page.goto('https://noroff.no/en')
+  await expect(page.getByRole('button')).toBeVisible() //trying to find out if the apply button is visible. so far NOT so good.
+})
+
 
 
 
