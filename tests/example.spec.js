@@ -9,6 +9,10 @@ test("Checking if we can open example.com", async ({ page }) => {
   await expect(page.getByRole('heading')).toBeVisible()
   await expect(page).toHaveTitle('Example Domain')
   await expect(page).toHaveURL('https://example.com/')
+  await expect(page.getByRole('paragraph').filter({hasText: 'This domain'})).toContainText('This domain') 
+  //Successfull test for paragraph. But what if i don't know the content of tha page?
+  const linkHref = await page.getByRole('link').getAttribute('href') //getting the href
+  await expect(linkHref).toBe('https://iana.org/domains/example') //successful checking link href
 })
 
 
