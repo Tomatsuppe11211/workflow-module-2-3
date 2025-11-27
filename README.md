@@ -4,6 +4,8 @@ This repo is meant for the lesson task belonging to module 2.3 in the workflow s
 
 ## Available scripts
 
+- npm start
+
 - npx prettier . --write
 
 - npx playwright test
