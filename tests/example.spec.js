@@ -1,7 +1,6 @@
 // @ts-check
 import { test, expect } from "@playwright/test";
 
-
 //opening https://example.com
 test("Checking if we can open example.com", async ({ page }) => {
   await page.goto("https://example.com")
@@ -19,7 +18,8 @@ test("Checking if we can open example.com", async ({ page }) => {
 
 test('Checking if i can find the button on the Noroff website', async ({page}) => {
   await page.goto('https://noroff.no/en')
-  await expect(page.getByRole('button')).toBeVisible() //trying to find out if the apply button is visible. so far NOT so good.
+  await expect(page.locator('#menu').getByRole('button', {name: 'Apply now'})).toBeVisible()
+  //test successful!
 })
 
 
