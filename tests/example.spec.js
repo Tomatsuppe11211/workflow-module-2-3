@@ -24,6 +24,11 @@ test('Checking if i can find the button on the Noroff website', async ({page}) =
 
 
 
+test('checking for sign up button on github', async ({page}) => {
+  await page.goto('https://github.com')
+  await expect(page.getByRole('link', {name: 'sign up'})).toBeVisible()
+  //test successfull!
+})
 
 
 
